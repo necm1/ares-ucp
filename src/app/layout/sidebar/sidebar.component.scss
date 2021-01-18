@@ -3,7 +3,7 @@
 :host {
   & > .nav {
     background-color: #{$main-dark};
-    height: 100vh;
+    height: 100%;
     width: calc(100vw - 93vw);
     box-shadow: 2px 0px 5px 0px rgb(0 0 0 / 0.15);
 
@@ -12,6 +12,32 @@
       background-color: #{$main-bg};
       overflow: hidden;
       width: 4rem;
+    }
+
+    & > .nav-divider {
+      background-color: rgb(87, 87, 87);
+      opacity: 0.5;
+      height: 2px;
+      width: calc(100% - 50%);
+    }
+
+    & > .nav-item {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+      & > .nav-link {
+        color: rgb(204, 204, 204);
+        opacity: 0.7;
+        transition: 250ms all;
+        font-size: 1.3rem;
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: #fff;
+          opacity: 1;
+        }
+      }
     }
   }
 }
