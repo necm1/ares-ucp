@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeModule } from './home/home.module';
 import { QuicklinkModule } from 'ngx-quicklink';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AresComponent],
@@ -17,6 +18,7 @@ import { QuicklinkModule } from 'ngx-quicklink';
     LayoutModule,
     FontAwesomeModule,
     HomeModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AresComponent],
