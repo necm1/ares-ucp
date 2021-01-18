@@ -1,1 +1,19 @@
+@import "./variables.scss";
+@import "@fontsource/open-sans";
+@import "@fontsource/raleway";
 @import "~bootstrap/scss/bootstrap";
+
+html {
+  body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Raleway", "Open Sans", sans-serif;
+  }
+}
+
+.ares--logo {
+  background-image: url("../assets/images/logo.png");
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 64px;
+}

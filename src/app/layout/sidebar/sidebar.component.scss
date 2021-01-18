@@ -1,0 +1,16 @@
+@import "../../../styles/variables.scss";
+
+:host {
+  & > .nav {
+    background-color: #{$main-dark};
+    height: 100vh;
+    width: calc(100vw - 93vw);
+
+    & > .nav--logo {
+      border-radius: 50rem;
+      background-color: #{$main-bg};
+      overflow: hidden;
+      width: 4rem;
+    }
+  }
+}
