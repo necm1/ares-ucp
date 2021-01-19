@@ -4,6 +4,7 @@
 @import "@fontsource/open-sans";
 @import "@fontsource/raleway";
 @import "~bootstrap/scss/bootstrap";
+@import "~notyf/notyf.min.css";
 
 html {
   body {
@@ -11,6 +12,15 @@ html {
     width: 100vw;
     font-family: "Raleway", "Open Sans", sans-serif;
   }
+}
+
+.with--bg {
+  background: url(../assets/images/bg.png) no-repeat 50% fixed !important;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(8px);
+  position: absolute;
+  z-index: -1;
 }
 
 .ares--logo {
