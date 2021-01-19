@@ -4,15 +4,16 @@
 @import "~bootstrap/scss/mixins/breakpoints";
 
 :host {
-  width: calc(100vw - 93vw);
+  background-color: #{$main-dark};
+  box-shadow: 2px 0px 5px 0px rgb(0 0 0 / 0.15);
+  width: 10em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: 250ms all;
 
-  & > .nav {
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #{$main-dark};
-    height: 100%;
-    box-shadow: 2px 0px 5px 0px rgb(0 0 0 / 0.15);
-
+  & > .list-group {
     & > .nav--logo {
       border-radius: 50rem;
       background-color: #{$main-bg};
@@ -27,9 +28,15 @@
       width: calc(100% - 50%);
     }
 
-    & > .nav-item {
+    & > li {
+      list-style-type: none;
+    }
+
+    & > .list-group-item {
+      background: transparent;
       margin-bottom: 1rem;
       margin-top: 1rem;
+      border: unset;
 
       & > .nav-link {
         color: rgb(204, 204, 204);

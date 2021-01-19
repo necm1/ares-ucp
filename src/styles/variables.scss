@@ -29,3 +29,23 @@ $container-max-widths: (
   lg: 1200px,
   xl: 1400px,
 );
+
+// Input
+$input-bg: #1c1d20;
+$input-border-radius: 2px;
+$input-border-color: #1c1d20;
+$input-color: #ffffff;
+$input-focus-bg: #303235;
+$input-focus-border-color: transparent;
+$input-focus-box-shadow: unset;
+$input-focus-color: #ffffff;
+$input-disabled-bg: #292b2f;
+$input-placeholder-color: #ffffff;
+$input-font-weight: 600;
+$input-font-size: 0.9rem;
+
+// Buttons
+$btn-font-weight: 600;
+$btn-box-shadow: unset;
+$btn-focus-box-shadow: 0 1px 3px 0 rgba(0, 6, 33, 0.5),
+  0 0 0 3px rgba(0, 0, 0, 0.2);
