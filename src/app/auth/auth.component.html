@@ -9,15 +9,16 @@
 </div>
 
 <div class="card">
-  <div class="card-body p-4">
-    <h3>Ares - User Control Panel</h3>
+  <div class="card-body p-4 d-flex flex-column">
+    <h3 class="d-inline-flex justify-content-center">User Control Panel</h3>
 
-    <form>
+    <form [formGroup]="authForm" (submit)="onSubmit()" class="mt-3">
       <div class="mb-3">
         <label for="username">Benutzername</label>
         <input
           type="text"
           id="username"
+          formControlName="username"
           class="form-control p-4"
           autocomplete="current-username"
           required
@@ -30,6 +31,7 @@
         <input
           type="password"
           id="password"
+          formControlName="password"
           class="form-control p-4"
           autocomplete="current-password"
           required

@@ -28,6 +28,7 @@
     "@ghnacker/icon-ionicons": "^5.1.2-alpha.1",
     "@icon/ionicons": "^5.0.1-alpha.0",
     "@ng-bootstrap/ng-bootstrap": "^9.0.0",
+    "@openfonts/titillium-web_latin": "^1.44.2",
     "bootstrap": "^4.5.0",
     "ionicons": "^5.3.0",
     "ngx-bootstrap": "^6.2.0",

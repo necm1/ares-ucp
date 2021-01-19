@@ -1,16 +1,31 @@
 @import "./variables.scss";
 @import "./inputs.scss";
+@import "./buttons.scss";
 @import "~@ghnacker/icon-ionicons/ionicons";
 @import "@fontsource/open-sans";
 @import "@fontsource/raleway";
 @import "~bootstrap/scss/bootstrap";
 @import "~notyf/notyf.min.css";
+@import "~@openfonts/titillium-web_latin/index.css";
+
+:root {
+  --main-bg-color: #{$main-bg};
+  --main-bg-red: #{$main-red};
+  --main-bg-red-alt: #{$main-bg-red-alt};
+  --main-bg-dark: #{$main-dark};
+  --main-bg-green: #{$main-green};
+
+
+
+  --btn-danger-primary: #b41030;
+  --btn-danger-secondary: #b9213f;
+}
 
 html {
   body {
     height: 100vh;
     width: 100vw;
-    font-family: "Raleway", "Open Sans", sans-serif;
+    font-family: "Titillium Web", sans-serif;
   }
 }
 

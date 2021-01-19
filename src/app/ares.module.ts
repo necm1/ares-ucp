@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AresComponent],
@@ -19,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeModule,
     RouterModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AresComponent],
