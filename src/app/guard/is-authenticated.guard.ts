@@ -14,11 +14,11 @@ import { AuthService } from '../auth/service/auth.service';
   providedIn: 'root',
 })
 /**
- * @class AuthGuard
+ * @class IsAuthenticatedGuard
  */
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class IsAuthenticatedGuard implements CanActivate, CanActivateChild {
   /**
-   * AuthGuard constructor
+   * IsAuthenticatedGuard constructor
    *
    * @constructor
    * @param authService
@@ -67,8 +67,8 @@ export class AuthGuard implements CanActivate, CanActivateChild {
    * @private
    */
   private checkAuth(): void {
-    if (!this.authService.isAuthenticated) {
-      this.router.navigateByUrl('auth');
+    if (this.authService.isAuthenticated) {
+      this.router.navigateByUrl('/');
     }
   }
 }
