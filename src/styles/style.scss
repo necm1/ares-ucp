@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "~@ghnacker/icon-ionicons/ionicons";
 @import "@fontsource/open-sans";
 @import "@fontsource/raleway";
 @import "~bootstrap/scss/bootstrap";
@@ -18,5 +19,6 @@ html {
   width: 64px;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+.cursor-pointer {
+  cursor: pointer;
+}

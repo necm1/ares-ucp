@@ -3,31 +3,34 @@
     <div class="ares--logo"></div>
   </li>
 
-  <li class="nav-item mt-5" tooltip="Benutzerkonto" placement="right">
+  <li
+    class="nav-item mt-5"
+    tooltip="Benutzerkonto"
+    placement="right"
+    container="ares-sidebar"
+  >
     <a class="nav-link" [routerLink]="['/']" routerLinkActive="active"
-      ><fa-icon [icon]="faUser"></fa-icon
+      ><i class="ion ion-person-circle-outline"></i
     ></a>
   </li>
 
   <li class="nav-item" tooltip="Fahrzeuge" placement="right">
-    <a class="nav-link" href="#"><fa-icon [icon]="faCar"></fa-icon></a>
+    <a class="nav-link" href="#"><i class="ion ion-car"></i></a>
   </li>
 
   <li class="nav-item" tooltip="Fraktion" placement="right">
-    <a class="nav-link" href="#"><fa-icon [icon]="faBriefCase"></fa-icon></a>
+    <a class="nav-link" href="#"><i class="ion ion-briefcase"></i></a>
   </li>
 
   <li class="nav-divider mt-auto"></li>
 
   <li class="nav-item mb-0" tooltip="Charakter Einstellungen" placement="right">
-    <a class="nav-link" routerLink="/" routerLinkActive="active"
-      ><fa-icon [icon]="faCog"></fa-icon
+    <a class="nav-link" routerLink="/settings" routerLinkActive="active"
+      ><i class="ion ion-settings"></i
     ></a>
   </li>
 
   <li class="nav-item mb-2" tooltip="Abmelden" placement="right">
-    <a class="nav-link" routerLink="/" routerLinkActive="active"
-      ><fa-icon [icon]="faSignOut"></fa-icon
-    ></a>
+    <a class="nav-link cursor-pointer"><i class="ion ion-log-out"></i> </a>
   </li>
 </ul>
