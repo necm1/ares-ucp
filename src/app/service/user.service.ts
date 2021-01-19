@@ -72,27 +72,30 @@ export class UserService {
   /**
    * Returns token from local storage
    *
+   * @public
    * @returns string | null
    */
-  get token(): string | null {
+  public get token(): string | null {
     return localStorage.getItem('ares-token');
   }
 
   /**
    * Set local storage token
    *
+   * @public
    * @param value
    */
-  set token(value: string | null) {
+  public set token(value: string | null) {
     localStorage.setItem('ares-token', value ?? '');
   }
 
   /**
    * Returns the current user
    *
+   * @public
    * @return User
    */
-  get user(): any {
+  public get user(): any {
     return this.userSubject.value;
   }
 }

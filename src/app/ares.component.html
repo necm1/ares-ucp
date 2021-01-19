@@ -1,7 +1,17 @@
-<ares-sidebar class="h-100 sticky-top"></ares-sidebar>
+<ng-container *ngIf="isAuthenticated; else noAuth">
+  <ares-sidebar class="h-100 sticky-top"></ares-sidebar>
 
-<main class="flex-fill">
-  <div class="container-fluid">
+  <main class="flex-fill">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</ng-container>
+
+<ng-template #noAuth>
+  <main
+    class="m-0 d-inline-flex flex-fill justify-content-center align-items-center"
+  >
     <router-outlet></router-outlet>
-  </div>
-</main>
+  </main>
+</ng-template>
