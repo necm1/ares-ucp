@@ -4,10 +4,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { LevelComponent } from './home/level/level.component';
 
 @NgModule({
-  declarations: [SidebarComponent],
+  declarations: [SidebarComponent, LevelComponent],
   imports: [CommonModule, TooltipModule.forRoot(), RouterModule],
-  exports: [SidebarComponent],
+  exports: [SidebarComponent, LevelComponent],
 })
 export class LayoutModule {}
