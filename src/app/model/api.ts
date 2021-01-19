@@ -5,14 +5,14 @@ export interface API {
   status: string;
   code: number;
   exception: string;
-  errors: [{message: string; trace: string}];
+  errors: [{ message: string; trace: string }];
   data: any;
 }
 
 /**
  * @interface APIPagination
  */
-export class APIPagination {
+export interface APIPagination {
   data: any;
   from: number;
   links: APIPaginationLinks[];
@@ -39,7 +39,7 @@ export class APIPagination {
 /**
  * @interface APIPaginationLinks
  */
-export class APIPaginationLinks {
+export interface APIPaginationLinks {
   url: string;
   label: string;
   active: boolean;

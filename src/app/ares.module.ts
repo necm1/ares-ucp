@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AresComponent],
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
     LayoutModule,
     HomeModule,
     RouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AresComponent],

@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {BehaviorSubject} from 'rxjs';
-import {ApiService} from './api.service';
-import {LoggerService} from './logger.service';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
+import { ApiService } from './api.service';
+import { LoggerService } from './logger.service';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +15,14 @@ export class UserService {
   /**
    * @private
    * @property
+   *
+   * TODO maybe disable strict type checking
+   * cause that looks really bad here.....
    */
   private userSubject: BehaviorSubject<any> = new BehaviorSubject<any>(
-    JSON.parse(localStorage.getItem('ares-user'))
+    localStorage.getItem('ares-user')
+      ? JSON.parse(localStorage.getItem('ares-user') ?? '')
+      : ''
   );
 
   /**
@@ -38,9 +43,9 @@ export class UserService {
    * @param token
    * @return Observable<User>
    */
-  get(token: string = null): Observable<any> {
+  get(token: string): Observable<any> {
     return this.apiService
-      .get('user', {headers: {Authorization: `Bearer ${token}`}})
+      .get('user', { headers: { Authorization: `Bearer ${token}` } })
       .pipe(
         map((response) => {
           if (token && !this.token) {
@@ -67,9 +72,9 @@ export class UserService {
   /**
    * Returns token from local storage
    *
-   * @returns string
+   * @returns string | null
    */
-  get token(): string {
+  get token(): string | null {
     return localStorage.getItem('ares-token');
   }
 
@@ -78,8 +83,8 @@ export class UserService {
    *
    * @param value
    */
-  set token(value: string) {
-    localStorage.setItem('ares-token', value);
+  set token(value: string | null) {
+    localStorage.setItem('ares-token', value ?? '');
   }
 
   /**
